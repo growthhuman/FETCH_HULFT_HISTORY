@@ -37,7 +37,7 @@ print "$hulft_server_name","<br>";
 # 選択項目によるロジック test中
 #
 #-----#-----#------------------------------------------------------#-----#-----#
-# [bpsjsrv1]を選択した場合のロジック
+# [----------]を選択した場合のロジック
 if ( $hulft_server_name eq "----------" ){
   if( $snd_rcv_flag eq "snd"){
    &MAKE_ARRAY_FROM_HULFT_RECORDS;
