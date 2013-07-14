@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="test/javascript" />
+<title>無題ドキュメント</title>
+</head>
+
+<body>
+<form name="form" method="post" action="/cgi-bin/HULFT_LIST/hulft_snd_rcv_history.cgi" target="migi">
+  <div align="justify">
+    <!--##########################################-->
+    *取得する履歴を入力<br>
+    FROM<br>
+  <input name="from_date" type="text" id="from_date" size="8" maxlength="8"><br>
+    TO<br>
+  <input name="to_date" type="text"   id="to_date"   size="8" maxlength="8"><br>
+  <br>
+<!--####################################################################################-->
+<script type="text/javascript">
+ myD = new Date();
+ myYear = myD.getFullYear();
+ myMonth = myD.getMonth() + 1;
+ myDate = myD.getDate();
+ if ( myMonth < 10 ) {
+　　myMonth = '0' + myMonth;
+ }
+ if ( myDate < 10 ) {
+　　myDate = '0' + myDate;
+ }
+ form.from_date.value = myYear+""+myMonth+""+myDate;
+ form.to_date.value = myYear+""+myMonth+""+myDate;
+</script>
+<!--####################################################################################-->
+  <!--##########################################-->
+    *送信・受信の選択<br>
+    送信<input name="snd_rcv_flag" type="radio" id="snd_rcv_flag" value="snd" checked>
+    受信<input name="snd_rcv_flag" type="radio" id="snd_rcv_flag" value="rcv"><br>
+  <br>
+  <!--##########################################-->
+    *HULFTサーバ<br>
+  <select name="hulft_server_name" id="hulft_server_name">
+    <option value="---------" selected>------------</option>
+    <option value="---------">bpstmng1</option>
+  </select><br>
+  <br>
+    <!--##########################################-->
+<input type="submit" value="送信" >
+  </div>
+</form>
+</body>
+</html>
