@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+div#google_afc_user {
+  visibility: hidden;
+}
+#menu ul>li {
+    float: left;
+    width: 120px;
+    height: 20px;
+    font-size: 13px;
+    text-align: center;
+    Color: white;
+    padding: 3px;
+    margin: 2px;
+    background: #ccc;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 #fff;
+    list-style-type:none
+}
+
+#menu ul>li:hover {
+    background: #ddd;
+}
+
+#menu ul>li>a {
+     Color:black;
+    text-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    display: block;
+}
